@@ -4,5 +4,5 @@ Now use the aggregation framework to calculate the author with the greatest numb
 
 To help you verify your work before submitting, the author with the fewest comments is Mariela Sherer and she commented 387 times. 
 
-db.posts.aggregate([ {$unwind: "$comments"}, {$group :{"_id" : "$comments.author", count: {$sum:1}}}, {$sort: {count:1}} ])
+```db.posts.aggregate([ {$unwind: "$comments"}, {$group :{"_id" : "$comments.author", count: {$sum:1}}}, {$sort: {count:1}} ])```
 

@@ -12,4 +12,4 @@ A city might have multiple zip codes.
 
 For this problem, we have used a subset of the data you previously used in zips.json, not the full set. For this set, there are only 200 documents (and 200 zip codes), and all of them are in New York, Connecticut, New Jersey, and California. 
 
-db.zips.aggregate([{$match:{state:{$in:['CA','NY']}}},{$group:{_id:{city:"$city"},pop:{$sum:"$pop"}}},{$match:{pop:{$gt:25000}}},{$group:{_id:"crap",pop:{$avg:"$pop"}}}])
+```db.zips.aggregate([{$match:{state:{$in:['CA','NY']}}},{$group:{_id:{city:"$city"},pop:{$sum:"$pop"}}},{$match:{pop:{$gt:25000}}},{$group:{_id:"crap",pop:{$avg:"$pop"}}}])```
